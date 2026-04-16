@@ -1,5 +1,5 @@
 {
-  "homepages":"https://github.com/PoojaShivarkar/portfplio",
+  "homepages":"https://github.com/PoojaShivarkar/portfolio",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -12,7 +12,7 @@
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
     "predeploy":"npm run build",
-    "deploy":"gh-pages -d build"
+    "deploy":"gh-pages -d dist"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
