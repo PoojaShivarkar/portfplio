@@ -81,7 +81,7 @@ export default function Navbar() {
             
             <div className="flex items-center gap-4">
               <SocialIcon href={import.meta.env.VITE_USER_LINKEDIN} icon={<Linkedin className="w-4 h-4" />} />
-              <SocialIcon href={`mailto:${import.meta.env.VITE_USER_EMAIL}`} icon={<Mail className="w-4 h-4" />} />
+              {/* <SocialIcon href={`mailto:${import.meta.env.VITE_USER_EMAIL}`} icon={<Mail className="w-4 h-4" />} /> */}
               <Button size="sm" className="rounded-full px-6 font-bold" onClick={() => scrollToSection('#contact')}>
                 Hire Me
               </Button>
@@ -115,7 +115,7 @@ export default function Navbar() {
             ))}
             <div className="flex gap-4 pt-4">
               <SocialIcon href={import.meta.env.VITE_USER_LINKEDIN} icon={<Linkedin className="w-5 h-5" />} />
-              <SocialIcon href={`mailto:${import.meta.env.VITE_USER_EMAIL}`} icon={<Mail className="w-5 h-5" />} />
+              {/* <SocialIcon href={`mailto:${import.meta.env.VITE_USER_EMAIL}`} icon={<Mail className="w-5 h-5" />} /> */}
             </div>
           </div>
         </motion.div>
