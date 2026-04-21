@@ -25,7 +25,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <SocialLink href={import.meta.env.VITE_USER_LINKEDIN} icon={<Linkedin className="w-5 h-5" />} />
-              <SocialLink href={`mailto:${import.meta.env.VITE_USER_EMAIL}`} icon={<Mail className="w-5 h-5" />} />
+              {/* <SocialLink href={`mailto:${import.meta.env.VITE_USER_EMAIL}`} icon={<Mail className="w-5 h-5" />} /> */}
             </div>
           </div>
 
@@ -35,6 +35,7 @@ export default function Footer() {
               <FooterLink href="#about">About</FooterLink>
               <FooterLink href="#services">Services</FooterLink>
               <FooterLink href="#projects">Projects</FooterLink>
+              <FooterLink href="#awards">Awards</FooterLink>
               <FooterLink href="#experience">Experience</FooterLink>
             </ul>
           </div>
