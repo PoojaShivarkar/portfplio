@@ -22,18 +22,19 @@ const awards: Award[] = [
   ,
   {
     id: "2",
-       description:"Outstanding performance and demonstrating the following values.Dedication, commitment, alignment.",
+    description:"Outstanding performance and demonstrating the following values.Dedication, commitment, alignment.",
     image: "image/award/award1.jpg",
   },
   {
     id: "3",
-       description:"Outstanding performance and demonstrating the following values.Accountability, Additional Responsibility, Team Player Outstanding performance and demonstrating the following values. Ownership, Excellence driven, Adaptability",
+    description:"Outstanding performance and demonstrating the following values.Accountability, Additional Responsibility, Team Player",
     image: "image/award/award2.jpg",
   },
-  // {
-  //   id: "4",
-  //   image: "image/award/certificate.png",
-  // },
+  {
+    id: "4",
+    description:"Outstanding performance and demonstrating the following values. Ownership, Excellence driven, Adaptability",
+    image: "image/award/award3.jpg",
+  },
 ];
 
 export default function Awards() {
@@ -78,7 +79,7 @@ export default function Awards() {
   };
 
   return (
-    <SectionWrapper id="awards" className="overflow-hidden">
+     <SectionWrapper id="awards" className="overflow-hidden">
       <div className="flex flex-col items-center justify-center space-y-12">
         <div className="text-center space-y-4">
           <motion.div
@@ -143,38 +144,32 @@ export default function Awards() {
             >
               <div className="group relative overflow-hidden rounded-[2.5rem] bg-accent/30 border border-border backdrop-blur-xl shadow-2xl transition-all duration-500 hover:shadow-blue-500/10 hover:border-blue-500/30">
                 <div className="grid md:grid-cols-2 items-center">
-                  <div className="relative h-[250px] md:h-[500px] overflow-hidden">
+                  <div className="relative h-[300px] md:h-[500px] overflow-hidden">
                     <img
                       src={awards[currentIndex].image}
-                      // alt={awards[currentIndex].title}
+                      alt="Achievement Award"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                       referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = `https://picsum.photos/seed/${awards[currentIndex].id}/800/600`;
+                      }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-background/20" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-background/20" />
                   </div>
                   
-                   <div className="p-8 md:p-12 space-y-6">
-                   {/* <div className="flex flex-wrap gap-4 items-center">
-                      <div className="flex items-center gap-2 text-xs font-mono text-blue-500 bg-blue-500/5 px-2 py-1 rounded border border-blue-500/10">
-                        <Calendar className="w-3 h-3" />
-                        {awards[currentIndex].date}
-                      </div>
-                      <div className="flex items-center gap-2 text-xs font-mono text-purple-500 bg-purple-500/5 px-2 py-1 rounded border border-purple-500/10">
-                        <Building2 className="w-3 h-3" />
-                        {awards[currentIndex].organization}
-                      </div>
+                  <div className="p-8 md:p-12 space-y-6">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-500 text-xs font-medium">
+                      <AwardIcon className="w-3 h-3" />
+                      Recognition Value
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-bold leading-tight group-hover:text-blue-400 transition-colors">
-                      {awards[currentIndex].title}
-                    </h3>
-                    */}
-                    <p className="text-muted-foreground leading-relaxed">
-                      {awards[currentIndex].description}
-                    </p> 
+                    <p className="text-xl md:text-2xl font-medium leading-relaxed text-foreground italic">
+                      "{awards[currentIndex].description}"
+                    </p>
 
-                    <div className="pt-4">
-                      <div className="h-1 w-12 bg-blue-500 rounded-full group-hover:w-24 transition-all duration-500" />
+                    <div className="pt-6">
+                      <div className="h-1.5 w-16 bg-blue-500 rounded-full group-hover:w-32 transition-all duration-500 shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
                     </div>
                   </div>
                 </div>

@@ -4,9 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Users, Briefcase, Award, Code2 } from "lucide-react";
 
 const stats = [
-  { label: "Years Experience", value: "4+", icon: <Briefcase className="w-6 h-6 text-blue-500" /> },
-  { label: "Projects Delivered", value: "10+", icon: <Award className="w-6 h-6 text-purple-500" /> },
-  { label: "Client Satisfaction", value: "80%", icon: <Users className="w-6 h-6 text-pink-500" /> },
+  { label: "Years Experience", value: "3+", icon: <Briefcase className="w-6 h-6 text-blue-500" /> },
+  { label: "Projects Delivered", value: "8+", icon: <Award className="w-6 h-6 text-purple-500" /> },
+  { label: "Client Satisfaction", value: "90%", icon: <Users className="w-6 h-6 text-pink-500" /> },
 ];
 
 const skills = [
