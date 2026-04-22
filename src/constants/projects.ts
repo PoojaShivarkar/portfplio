@@ -242,5 +242,72 @@ export const projects = [
     ],
     liveUrl: "#",
     githubUrl: "#"
+  },
+    {
+    title: "🔐 Authentication & Authorization System",
+    subtitle: "Security-First Implementation",
+    role: "Full Stack Developer",
+    tech: ["Node.js", "Express", "TypeScript", "MongoDB", "JWT", "bcrypt", "Zustand"],
+    description: "A robust, security-focused authentication and authorization infrastructure designed to scale across multiple client and admin applications.",
+    image: "image/project/authentication.jpg",
+    tags: ["Security", "Infrastructure", "Backend"],
+    contributions: [
+      "Designed authentication and authorization architecture from scratch",
+      "Built secure backend APIs and modular middleware for access control",
+      "Integrated authentication flows into both web and admin applications",
+      "Ensured secure handling of user sessions and sensitive data"
+    ],
+    problem: "Basic authentication systems often introduce serious risks like weak password handling, improper access control, and poorly managed tokens. The challenge was to build a system that is secure by design while keeping the user experience frictionless.",
+    architecture: "Implemented using Node.js, Express, and TypeScript with a MongoDB database. The system follows a modular architecture, allowing it to be reused as a standalone service across the entire product ecosystem.",
+    features: [
+      {
+        title: "Secure Authentication",
+        description: "Implemented signup and login flows with strict validation and bcrypt hashing for password security."
+      },
+      {
+        title: "Token-Based Authorization",
+        description: "Utilized JWT (JSON Web Tokens) for stateless authentication with controlled expiration and validation."
+      },
+      {
+        title: "Role-Based Access Control (RBAC)",
+        description: "Defined flexible roles (User/Admin) and enforced strict access patterns via specialized middleware."
+      },
+      {
+        title: "API Protection Layer",
+        description: "Secured all protected endpoints with a dedicated middleware layer to prevent unauthorized access."
+      },
+      {
+        title: "Frontend State Management",
+        description: "Managed global authentication state and session persistence using Zustand for a smooth UI experience."
+      }
+    ],
+    challengesSolutions: [
+      {
+        challenge: "Balancing Security vs. User Experience",
+        solution: "Kept flows simple while enforcing critical protections like token expiration and strict input validation."
+      },
+      {
+        challenge: "Token Storage Strategy",
+        solution: "Evaluated risks between local storage and cookies to implement a secure persistence model."
+      },
+      {
+        challenge: "Cross-App Scalability",
+        solution: "Designed the authentication logic as modular middleware that can be instantly plugged into new services."
+      }
+    ],
+    impact: [
+      "Secured 100% of sensitive application endpoints and user data",
+      "Reduced vulnerability surface through industry-standard encryption and RBAC",
+      "Enabled clean, scalable separation of user and admin permissions",
+      "Created a reusable security foundation for future projects"
+    ],
+    learnings: [
+      "Authorization is just as critical as authentication for a complete security model",
+      "Middleware is the most effective way to maintain a clean, secure backend architecture",
+      "Designing from an attacker's perspective is essential for building resilient systems",
+      "Security-first design saves significant refactoring time in the long run"
+    ],
+    liveUrl: "#",
+    githubUrl: "#"
   }
 ];
